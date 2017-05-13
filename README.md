@@ -39,6 +39,7 @@ The algorithm is broken into 2 phases. The first builds on Gale and Shapley's wo
 To perform the proposals phase, each participant goes through its preference list, proposing to each member until it is accepted. If a proposal is rejected, then both participants remove each other from their preference lists. A participant will reject a proposal from another person if they already hold a proposal from someone higher up in their preference list. Note that proposals may be rejected in later rounds; if that happens, we simply encourage the rejected party to get back out there, starting at the next spot in their list and continue proposing.
 
 At the end of this phase, we then trim the preference lists, where each participant rejects anyone later in the list than the person who proposed to them. If there are no empty lists, we've resulted in something called a stable table. There are a few important properties of stable tables:
+
 1. x is first on y's list iff y is last on x's list
 2. x is not on y's list if y is not on x's list or if x prefers the last element on its list to y
 3. no list is empty
@@ -47,6 +48,7 @@ At the end of this phase, we then trim the preference lists, where each particip
 6. most importantly - a stable table where all lists are of length one is a stable matching!
 
 In the second phase, Irving uses rotations. A __rotation__ is defined as a series pairs, (x<sub>0</sub>, y<sub>0</sub>),(x<sub>i+1</sub>, y<sub>i+1</sub>),…,(x<sub>k-1</sub>, y<sub>k-1</sub>), where:
+
 1. all x<sub>0</sub>...x<sub>i</sub> are distinct
 2. y<sub>i</sub> is first on x<sub>(i+1 mod k)</sub>’s reduced list
 3. y<sub>i</sub> is second on x<sub>i</sub>’s list
