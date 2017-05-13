@@ -115,9 +115,13 @@ The important part here is that the preference lists are reduced in each round A
 
 ### Demonstration
 
-There is a demonstration that accompanies this writeup. It currently has 3 examples pre-programmed. Use the left and right arrow keys to traverse through the algorithm's operations. At any point, you may hit 0, 1 or 2 to change the example. It is written in Processing; to run the sourcecode, download the most recent version and compile. I will try to add an pre-exported version (preferaly in JS, so I can directly embed into this page and should have better portability).
+There is a demonstration that accompanies this writeup. It currently has 3 examples pre-programmed. Use the left and right arrow keys to traverse through the algorithm's operations. At any point, you may hit 0, 1 or 2 to change the example. It is written in Processing; I've included a link to an in-browser demo. 
+
+[JS Demo](https://msquizzle.github.io/150-AD/code/)
 
 [Source Code](https://github.com/mSquizzle/150-AD/blob/master/code/irving.pde) 
+
+_Note: mainly due to the way that state is saved (since we copy over several n*n arrays), this implementation incurs a lot more overhead than Irving's algorithm. This is much closer to O(n<sup>4</sup>) overall._
 
 ## Variants
 
