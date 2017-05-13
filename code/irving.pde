@@ -585,7 +585,6 @@ void keyPressed(){
 }
 
 void draw(){
-  clear();
   background(255);
   textFont(f,16);                  
   fill(0);
