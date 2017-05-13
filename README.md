@@ -11,15 +11,21 @@ In the same paper, Gale and Shapley presented the idea of SRP, removing the bipa
 
 > __Given a set of 2n participants, where each strictly ranks the other members of the set, create a stable matching.__
 
-In the 1970s, Donald Knuth, in an exploration of SMP variants, demonstrated that it is possible have multiple stable matchings for SRP. In the image below, there are three stable matchings: __{__{1,2}, {3, 4}, {5, 8}, {6, 7}__}__ - __{__{1, 4}, {2, 3}, {5, 6}, {7, 8}__}__ - __{__{1, 5}, {2, 6}, {3, 7}, {4, 8}__}__.
+In the 1970s, Donald Knuth, in an exploration of SMP variants, demonstrated that it is possible have multiple stable matchings for SRP. In the image below, there are three stable matchings: 
 
-![multipleMatching](https://github.com/mSquizzle/150-AD/blob/master/images/multipleStableMatchings.PNG)
+> __{__{1,2}, {3, 4}, {5, 8}, {6, 7}__}__
+>
+> __{__{1, 4}, {2, 3}, {5, 6}, {7, 8}__}__ 
+>
+> __{__{1, 5}, {2, 6}, {3, 7}, {4, 8}__}__
+
+![multipleMatching](https://msquizzle.github.io/150-AD/images/multipleStableMatchings.PNG)
 
 He then asked whether it was possible to solve the problem in polynomial time. The answer did not come until the 1980s, when Robert Irving published an algorithm to find a solution to the problem, if it exists. This is a fairly imporant departure from SMP - __a stable matching may not always be possible__. It's not difficult to construct a circumstance where this would be the case. Let's examine two configurations of a group of friends. 
 
 Config 1 | Config 2 |
 --- | --- |
-![workingMatching](https://github.com/mSquizzle/150-AD/blob/master/images/workingFriends.PNG)|![failingMatching](https://github.com/mSquizzle/150-AD/blob/master/images/fightingFriends.PNG)|
+![workingMatching](https://msquizzle.github.io/150-AD/images/workingFriends.PNG)|![failingMatching](https://msquizzle.github.io/150-AD/images/fightingFriends.PNG)|
 
 In the first configuration, we can see that a stable matching will be possible, despite the fact that Joey seems to be everyone's least favorite (perhaps because he doesn't share his food). Monica and Rachel can be paired together, placing Chandler with Joey. Even though Chandler would prefer to live with one of the girls, the women are so happy together, that neither one would be willing to swap roommates.
 
@@ -55,8 +61,8 @@ Rotations may sound odd to keep track of, but they're very simple when you draw 
 // Phase 1: Proposals
 set-proposed-to := [];
 for person in X 
-	begin
-		proposer := person;
+    begin
+	proposer := person;
 		repeat
 		proposer proposes to his next-choice;
 		if not rejected
@@ -142,7 +148,7 @@ There are also different kinds of optimality to consider in SMP (and variants li
 Another variant that's worth checking out is the 3D SRP, which is Stable Roommates where we try to break the set into triples instead of pairs. Researchers in Japan has shown this to be possible, but solving the problem is NP-hard. The following image is an instance where a stable matching of {1, 3, 5} and {2, 4, 6} can be found; like the original problem, it is possible that a stable matching does not exist.
 
 
-![3dMatching](https://github.com/mSquizzle/150-AD/blob/master/images/working3Dsrp.PNG)
+![3dMatching](https://msquizzle.github.io/150-AD/images/working3Dsrp.PNG)
 
 ## Sources
 - Irving's Algorithm - https://uvacs2102.github.io/docs/roomates.pdf
